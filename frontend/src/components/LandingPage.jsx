@@ -228,7 +228,7 @@ const LandingPage = () => {
 
         <button
           onClick={() => navigate("/bus-tracking")}
-          className="mt-10 sm:mt-12 px-8 py-4 sm:px-10 sm:py-5 rounded-xl bg-black text-white text-base sm:text-lg font-semibold hover:bg-gray-900 transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center"
+          className="mt-10 sm:mt-12 px-8 py-4 sm:px-10 sm:py-5 cursor-pointer rounded-xl bg-black text-white text-base sm:text-lg font-semibold hover:bg-gray-900 transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center"
         >
           <Bus className="w-5 h-5 mr-2" />
           Get Started Now
@@ -278,7 +278,7 @@ const LandingPage = () => {
           </p>
           <button
             onClick={() => navigate("/bus-tracking")}
-            className="mt-4 px-8 py-4 sm:px-10 sm:py-5 rounded-xl bg-black text-white text-base sm:text-lg font-semibold hover:bg-gray-900 transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center mx-auto"
+            className="mt-4 px-8 py-4 sm:px-10 sm:py-5 rounded-xl cursor-pointer bg-black text-white text-base sm:text-lg font-semibold hover:bg-gray-900 transform hover:scale-105 transition-all duration-300 shadow-2xl flex items-center justify-center mx-auto"
           >
             <Bus className="w-5 h-5 mr-2" />
             Get Started Now

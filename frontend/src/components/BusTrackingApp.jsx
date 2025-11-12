@@ -210,13 +210,13 @@ export default function BusTrackingApp() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <button
               onClick={() => setMode("driver")}
-              className="bg-white text-black hover:bg-gray-200 transition-all rounded-2xl border-2  p-8 font-bold text-xl"
+              className="bg-white text-black hover:bg-gray-800 hover:text-white cursor-pointer transition-all rounded-2xl border-2  p-8 font-bold text-xl"
             >
               Driver Portal
             </button>
             <button
               onClick={handleStudentMode}
-              className="bg-white text-black hover:bg-gray-200 transition-all rounded-2xl p-8 font-bold text-xl border-2 "
+              className="bg-white text-black hover:bg-gray-800 hover:text-white cursor-pointer transition-all rounded-2xl p-8 font-bold text-xl border-2 "
             >
               Student Portal
             </button>
