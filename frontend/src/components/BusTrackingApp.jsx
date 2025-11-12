@@ -225,55 +225,105 @@ export default function BusTrackingApp() {
       </div>
     );
   }
-
-  // ---- Driver Login ----
-  if (mode === "driver" && !driverInfo) {
-    return (
-      <div className="min-h-screen w-full bg-black relative flex items-center justify-center text-white p-6">
-        <Background />
-        <div className="relative z-10 bg-black border border-gray-700 p-8 rounded-3xl w-full max-w-md space-y-6">
-          <h2 className="text-3xl font-bold text-center">Driver Login</h2>
-          <input
-            type="text"
-            value={driverCredentials.username}
-            onChange={(e) =>
-              setDriverCredentials({
-                ...driverCredentials,
-                username: e.target.value,
-              })
-            }
-            placeholder="Username"
-            className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
-          />
-          <input
-            type="password"
-            value={driverCredentials.password}
-            onChange={(e) =>
-              setDriverCredentials({
-                ...driverCredentials,
-                password: e.target.value,
-              })
-            }
-            placeholder="Password"
-            className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
-          />
-          <button
-            onClick={handleDriverLogin}
-            disabled={isLoggingIn}
-            className="w-full bg-white text-black hover:bg-gray-200 transition-all rounded-xl p-3 font-bold"
-          >
-            {isLoggingIn ? "Logging in..." : "Login"}
-          </button>
-          <button
-            onClick={() => setMode("select")}
-            className="w-full bg-black border border-gray-500 hover:bg-gray-900 rounded-xl p-3 font-bold text-white"
-          >
-            Back
-          </button>
-        </div>
+{/* ---- Driver Login ---- */}
+if (mode === "driver" && !driverInfo) {
+  return (
+    <div className="min-h-screen w-full bg-black relative flex items-center justify-center text-white p-6">
+      <Background />
+      <div className="relative z-10 bg-black border border-gray-700 p-8 rounded-3xl w-full max-w-md space-y-6">
+        <h2 className="text-3xl font-bold text-center">Driver Login</h2>
+        <p className="text-center text-yellow-400 font-semibold">
+          🚧 The Driver Portal is currently in development mode.
+        </p>
+        <input
+          type="text"
+          value={driverCredentials.username}
+          onChange={(e) =>
+            setDriverCredentials({
+              ...driverCredentials,
+              username: e.target.value,
+            })
+          }
+          placeholder="Username"
+          className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
+        />
+        <input
+          type="password"
+          value={driverCredentials.password}
+          onChange={(e) =>
+            setDriverCredentials({
+              ...driverCredentials,
+              password: e.target.value,
+            })
+          }
+          placeholder="Password"
+          className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
+        />
+        <button
+          onClick={handleDriverLogin}
+          disabled={isLoggingIn}
+          className="w-full bg-white text-black hover:bg-gray-200 transition-all rounded-xl p-3 font-bold"
+        >
+          {isLoggingIn ? "Logging in..." : "Login"}
+        </button>
+        <button
+          onClick={() => setMode("select")}
+          className="w-full bg-black border border-gray-500 hover:bg-gray-900 rounded-xl p-3 font-bold text-white"
+        >
+          Back
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
+  // ---- Driver Login ----
+  // if (mode === "driver" && !driverInfo) {
+  //   return (
+  //     <div className="min-h-screen w-full bg-black relative flex items-center justify-center text-white p-6">
+  //       <Background />
+  //       <div className="relative z-10 bg-black border border-gray-700 p-8 rounded-3xl w-full max-w-md space-y-6">
+  //         <h2 className="text-3xl font-bold text-center">Driver Login</h2>
+  //         <input
+  //           type="text"
+  //           value={driverCredentials.username}
+  //           onChange={(e) =>
+  //             setDriverCredentials({
+  //               ...driverCredentials,
+  //               username: e.target.value,
+  //             })
+  //           }
+  //           placeholder="Username"
+  //           className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
+  //         />
+  //         <input
+  //           type="password"
+  //           value={driverCredentials.password}
+  //           onChange={(e) =>
+  //             setDriverCredentials({
+  //               ...driverCredentials,
+  //               password: e.target.value,
+  //             })
+  //           }
+  //           placeholder="Password"
+  //           className="w-full p-3 rounded-xl bg-black border border-gray-600 text-white"
+  //         />
+  //         <button
+  //           onClick={handleDriverLogin}
+  //           disabled={isLoggingIn}
+  //           className="w-full bg-white text-black hover:bg-gray-200 transition-all rounded-xl p-3 font-bold"
+  //         >
+  //           {isLoggingIn ? "Logging in..." : "Login"}
+  //         </button>
+  //         <button
+  //           onClick={() => setMode("select")}
+  //           className="w-full bg-black border border-gray-500 hover:bg-gray-900 rounded-xl p-3 font-bold text-white"
+  //         >
+  //           Back
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // ---- Driver Dashboard ----
   if (mode === "driver" && driverInfo) {
